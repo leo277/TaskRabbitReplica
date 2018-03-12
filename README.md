@@ -12,6 +12,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+  Using homebrew postgres, to start the service, do:   brew services start postgresql
 
 * Database initialization
 
