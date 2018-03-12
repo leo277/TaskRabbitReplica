@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskRabbit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-default">
+  		<div class="container">
+  			<div class="navbar-brand"><%= link_to "Task Rabbit", root_path %></div>
+			  	<ul class="nav navbar-nav">
+			  	<% Category.all.each do |cat| %>
+			  		<li><%= link_to cat.name, tasks_path(:category_id => cat.id) %></li>
+			  	<% end %>
+			    </ul>
+					<%= link_to "New Task", new_task_path, class: "navbar-text navbar-right navbar-link" %>
+
+			  </div>
+	  </div>
+	</nav>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <%= yield %>
+    </div>
+  </div>
+
+  </body>
+</html>

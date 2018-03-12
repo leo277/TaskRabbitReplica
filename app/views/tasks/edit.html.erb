@@ -1,0 +1,16 @@
+<div id="jobs">
+	<div class="job">
+		<% if @task.errors.any? %>
+			<% @task.errors.full_messages.each do |error| %></h1>
+		     <h3><%= error %></h3>
+		   <% end %>
+		<% end %>
+
+		<h1>Edit</h1>
+		<%= render partial: 'form' %>
+	</div>
+</div>
+
+<div id="links">
+	<%= link_to 'Back', task_path, class: "btn-default btn-sm btn" %>
+</div>
