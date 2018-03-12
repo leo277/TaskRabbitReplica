@@ -16,6 +16,7 @@
 			  	<% Category.all.each do |cat| %>
 			  		<li><%= link_to cat.name, tasks_path(:category_id => cat.id) %></li>
 			  	<% end %>
+          <li><%= link_to "Yongkai's Home", "http://yongkaizhang.com" %></li>
 			    </ul>
 					<%= link_to "New Task", new_task_path, class: "navbar-text navbar-right navbar-link" %>
 
